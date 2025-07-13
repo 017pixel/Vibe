@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Vibe</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Nunito+Sans:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id="app-container">
+        <!-- Header with app name, settings, and coins -->
+        <header id="main-header">
+            <div class="app-title">Vibe</div>
+            <div class="header-controls">
+                <div class="coin-display">
+                    <span class="emoji">💰</span>
+                    <span id="coin-count">0</span>
+                </div>
+                <button id="settings-button" class="icon-button">⚙️</button>
+            </div>
+        </header>
+
+        <!-- Main content, dynamically filled -->
+        <main id="main-content">
+            <!-- Views (Screens) are loaded here by JS -->
+        </main>
+
+        <!-- Main navigation at the bottom -->
+        <nav id="bottom-nav">
+            <button data-screen="focus" class="nav-button active">🎯<span class="nav-text" data-lang-key="nav_focus">Fokus</span></button>
+            <button data-screen="forest" class="nav-button">🌳<span class="nav-text" data-lang-key="nav_forest">Wald</span></button>
+            <button data-screen="shop" class="nav-button">🛍️<span class="nav-text" data-lang-key="nav_shop">Shop</span></button>
+            <button data-screen="stats" class="nav-button">📊<span class="nav-text" data-lang-key="nav_stats">Statistik</span></button>
+        </nav>
+    </div>
+
+    <!-- Settings Bottom Sheet (hidden by default) -->
+    <div id="settings-sheet" class="bottom-sheet-overlay hidden">
+        <div class="bottom-sheet-content">
+            <div class="sheet-handle"></div>
+            <h2 data-lang-key="settings_title">Einstellungen</h2>
+            <div class="setting-row">
+                <label for="theme-toggle" data-lang-key="settings_theme">Dark Mode / Light Mode</label>
+                <div class="toggle-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <label for="theme-toggle"></label>
+                </div>
+            </div>
+            <div class="setting-row">
+                <label for="language-select" data-lang-key="settings_language">Sprache</label>
+                <select id="language-select">
+                    <option value="de">Deutsch</option>
+                    <option value="en">English</option>
+                </select>
+            </div>
+            <button id="close-settings-button" data-lang-key="settings_close">Schließen</button>
+        </div>
+    </div>
+    
+    <!-- Emoji Selection Bottom Sheet (hidden by default) -->
+    <div id="emoji-selection-sheet" class="bottom-sheet-overlay hidden">
+        <div class="bottom-sheet-content">
+            <div class="sheet-handle"></div>
+            <h2 data-lang-key="widget_select_title">Pflanze wählen</h2>
+            <div id="emoji-grid-container">
+                <!-- Emoji options will be dynamically inserted here by JS -->
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
