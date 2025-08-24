@@ -1,0 +1,43 @@
+{
+    "name": "Vibe",
+    "short_name": "Vibe",
+    "description": "Eine Fokus- und Produktivitäts-App zur Gamifizierung von Arbeitssitzungen.",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#1E1E1E",
+    "theme_color": "#1E1E1E",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "icon.png",
+            "type": "image/png",
+            "sizes": "48x48"
+        },
+        {
+            "src": "icon.png",
+            "type": "image/png",
+            "sizes": "72x72"
+        },
+        {
+            "src": "icon.png",
+            "type": "image/png",
+            "sizes": "96x96"
+        },
+        {
+            "src": "icon.png",
+            "type": "image/png",
+            "sizes": "144x144"
+        },
+        {
+            "src": "icon.png",
+            "type": "image/png",
+            "sizes": "192x192",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "icon.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ]
+}
